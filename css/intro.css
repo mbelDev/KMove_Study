@@ -140,18 +140,117 @@ section {
   width: 100%;
 }
 .intro-main__content__img-list li h5 {
-  text-align: center;
-  width: 100%;
   display: block;
+  width: 100%;
   font-size: 26px;
   font-weight: 700;
+  text-align: center;
 }
 .intro-main__content__img-list li p {
-  text-align: center;
+  margin: 5px 0 0 0;
   font-size: 24px;
   font-weight: 500;
-  margin: 5px 0 0 0;
+  text-align: center;
 }
+.intro-main__content .content__row {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.intro-main__content .content__row h5 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 50px;
+}
+.intro-main__content .content__row p {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #fff;
+  line-height: 28px;
+}
+.intro-main__content .content__item1 {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+  background: url(../img/danal_intro/img_danal02.png) no-repeat center/cover;
+  border-radius: 30px;
+}
+.intro-main__content .content__item1 p {
+  padding-right: 200px;
+  max-width: 700px;
+}
+.intro-main__content .content__item2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 350px;
+  padding: 30px;
+  background: #297bf6 url(../img/danal_intro/icon_danal06.png) no-repeat 90% 90%/130px 130px;
+  align-content: flex-end;
+  border-radius: 30px;
+}
+.intro-main__content .content__item3 {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  height: 350px;
+  margin-left: 20px;
+  padding: 30px;
+  background: #1e3663 url(../img/danal_intro/icon_danal07.png) no-repeat 5% -20%/330px auto;
+  align-content: flex-end;
+  border-radius: 30px;
+}
+.intro-main__content .content__item3 h5 {
+  text-align: right;
+}
+.intro-main__content .content__item3 p {
+  text-align: right;
+  max-width: 500px;
+}
+
+.intro-info {
+  color: #fff;
+  background: #297bf6;
+}
+.intro-info__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 128px;
+  align-content: stretch;
+}
+.intro-info__list li {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+.intro-info__list li strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500 !important;
+  color: #fff;
+}
+.intro-info__list li span {
+  display: block;
+  padding: 15px 50px;
+}
+.intro-info__list li span img {
+  width: 100%;
+}
+.intro-info__list li p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+
 .container {
   position: relative;
   margin: 0 auto;

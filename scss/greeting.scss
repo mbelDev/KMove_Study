@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixins";
+
+main {
+  position: relative;
+  left: 0;
+}
+section {
+  position: relative;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.header {
+  .header__gnb {
+    .gnb {
+      .gnb__main-menu {
+        color: #222;
+      }
+    }
+  }
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
