@@ -1,0 +1,160 @@
+main {
+  position: relative;
+  left: 0;
+}
+
+section {
+  position: relative;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.header .header__gnb .gnb .gnb__main-menu {
+  color: #222;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.intro-head {
+  height: auto;
+}
+.intro-head__menu {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  text-align: left;
+  border-bottom: 4px solid #282f3a;
+}
+.intro-head__menu ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.intro-head__menu ul li {
+  padding: 25px 25px 25px 0;
+}
+.intro-head__menu ul li a {
+  font-size: 30px;
+  font-weight: 600;
+}
+.intro-head .container {
+  height: auto;
+  padding: 140px 120px 0px 120px;
+}
+
+.intro-greeting__title h3 {
+  position: relative;
+  padding: 100px 0;
+  font-size: 60px;
+  font-weight: 700;
+}
+.intro-greeting__title h3 strong {
+  font-weight: 700;
+  color: #297bf6;
+}
+.intro-greeting__title h3 em {
+  color: transparent;
+  -webkit-text-stroke: 1px #222;
+}
+.intro-greeting__title h3 em .red {
+  -webkit-text-stroke: 1px #ff4634;
+}
+.intro-greeting__title h3 em .blue {
+  -webkit-text-stroke: 1px #297bf6;
+}
+.intro-greeting__title p {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 35px;
+  max-width: 1300px;
+  word-break: keep-all;
+}
+
+.intro-visual {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background: url(../img/danal_intro/img_danal01.png) no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro-main__title h4 {
+  display: block;
+  margin-top: 150px;
+  font-size: 38px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px #297bf6;
+}
+.intro-main__title h5 {
+  display: block;
+  margin: 30px 0 40px;
+  font-size: 44px;
+  font-weight: 800;
+  color: #282f3a;
+  line-height: 64px;
+  word-break: keep-all;
+  max-width: 820px;
+}
+.intro-main__title p {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 35px;
+  max-width: 1300px;
+  word-break: keep-all;
+}
+.intro-main__content__img-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-main__content__img-list li {
+  position: relative;
+  margin: 0 30px;
+  text-align: center;
+}
+.intro-main__content__img-list li:nth-child(1) {
+  max-width: 220px;
+}
+.intro-main__content__img-list li:nth-child(2) {
+  max-width: 60px;
+}
+.intro-main__content__img-list li:nth-child(3) {
+  max-width: 150px;
+}
+.intro-main__content__img-list li:nth-child(4) {
+  max-width: 290px;
+}
+.intro-main__content__img-list li:nth-child(5) {
+  max-width: 200px;
+}
+.intro-main__content__img-list li img {
+  width: 100%;
+}
+.intro-main__content__img-list li h5 {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+}
+.intro-main__content__img-list li p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 5px 0 0 0;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 140px 120px;
+  max-width: 1640px;
+}

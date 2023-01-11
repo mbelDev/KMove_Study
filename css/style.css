@@ -1,0 +1,613 @@
+/* prettier-ignore */
+dl,ul,ol,menu,li{
+    list-style: none;
+}
+body {
+  font-family: "Pretendard", "Dotum", "돋움", sans-serif;
+  color: #111;
+  font-size: 16px;
+  min-height: 5000px;
+}
+/* 
+    Block요소를 옆으로 나란히 배치하는 방법
+    flex는 부모자식간의 관계에서 설정 가능 
+*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  /* -- fixed는 body기준 absolute는 부모 기준 */
+  top: 0;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999;
+  /* -- flex-direction에 의해 결정된 main-axis정렬 -- */
+}
+header h1 {
+  z-index: 1000;
+}
+header h1 a {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+header h1 a img {
+  height: 50px;
+}
+header nav {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 600;
+}
+header nav ul li:hover {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+header nav ul li {
+  position: relative;
+  min-width: 170px;
+  text-align: center;
+}
+header nav > ul > li {
+  font-size: 20px;
+}
+header nav > ul > li:hover > a {
+  color: #0c64f1;
+}
+header nav > ul > li > p {
+  border-bottom: 2px solid #0c64f1;
+  width: 0%;
+  transition: width 300ms;
+}
+header nav > ul > li:hover > p {
+  position: absolute;
+  width: 100%;
+  transition: width 300ms;
+}
+header > nav > ul > li > a {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+header nav > ul > li > ul {
+  display: block;
+  position: absolute;
+  top: 100px;
+  font-size: 16px;
+  text-align: left;
+  border-left: 1px solid rgba(128, 128, 128, 0.8);
+}
+header nav > ul > li:last-child > ul {
+  border-right: 1px solid rgba(128, 128, 128, 0.8);
+}
+header nav > ul > li > ul > li {
+  position: relative;
+  padding: 10px 0;
+  opacity: 0.4;
+  transition: opacity 300ms;
+}
+header nav > ul > li > ul > li:hover {
+  color: #0c64f1;
+}
+header .btn_header {
+  width: 140px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.header-menu {
+  top: 0;
+  left: 0;
+  padding: 0 400px;
+  opacity: 1;
+  height: 100%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0);
+  transition: all 300ms;
+}
+.header-menu:hover {
+  width: 100%;
+  height: 360px;
+  color: #222;
+  background: rgba(255, 255, 255, 1);
+  transition: all 300ms;
+}
+main {
+  position: relative;
+  left: 0;
+}
+section {
+  overflow: hidden;
+  position: relative;
+  height: 800pt;
+  margin: 0 auto;
+  z-index: 5;
+  left: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+textarea {
+  font-family: inherit;
+}
+button {
+  border: none;
+}
+video {
+  width: 100%;
+}
+
+/* -- class -- */
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.visual {
+  position: fixed;
+  width: 100%;
+  height: 800px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.visual .txt {
+  position: absolute;
+  font-size: 52pt;
+  color: #fff;
+  top: 48px;
+  padding: 120px 240px;
+  margin: 0 auto;
+  z-index: 30;
+}
+.visual .txt p .red {
+  color: #f00;
+}
+.visual .txt p .blue {
+  color: #00f;
+}
+.visualFilter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: 20;
+  background: linear-gradient(to right, #031840 40%, rgba(255, 255, 255, 0) 100%);
+}
+.visual .txt > i {
+  padding-top: 60px;
+  animation: scroll 0.5s infinite alternate;
+}
+
+/* -- introDanal -- */
+.introDanal {
+  margin-top: 45%;
+  text-align: center;
+  position: relative;
+  background: url(../img/bg_introduce.png) no-repeat center / 2400px 900px #f2f5f9;
+  width: 100%;
+  height: 800px;
+}
+.introDanal h2 {
+  position: relative;
+  font-size: 90px;
+  color: #222;
+  display: inline-block;
+  margin: 0 auto;
+}
+.introDanal h2 em {
+  color: #3c8aff;
+}
+.introDanal p {
+  font-size: 44px;
+  font-weight: 400;
+  color: #222;
+  margin: 0 auto;
+}
+.introDanal p em {
+  color: #3c8aff;
+  font-weight: 600;
+}
+.introDanalInner {
+  position: relative;
+  padding: 140px 120px;
+  max-width: 1640px;
+  height: 0px;
+  margin: 0 auto;
+}
+.introDanalInner button {
+  position: relative;
+  background: #297bf6;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 100px;
+  padding: 20px 50px;
+  margin: 60px auto;
+}
+
+/* -- techDanal -- */
+.techDanal {
+  position: relative;
+  background-color: #2475ee;
+  font-size: 24px;
+  color: #fff;
+  text-align: left;
+  padding: 120px 140px;
+  height: 800px;
+}
+.techDanalContainer {
+  position: relative;
+  max-width: 1640px;
+  padding: 140px 120px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.techDanalContainer > div {
+  position: absolute;
+  height: 555px;
+}
+.techDanalContainer > div > h2 {
+  position: relative;
+  font-size: 78px;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+}
+.techDanalContainer > div > p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 80px;
+}
+.techDanalContainer > div > button {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 50px 10px 0;
+  background: url(../img/icon_arr04.png) no-repeat 90% 50%/22px 12px;
+}
+.techDanalContainer > ul {
+  position: absolute;
+  right: 120px;
+  width: 510px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.techDanalContainer > ul li {
+  list-style: none;
+}
+.techDanalContainer > ul li p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 7px;
+}
+.techDanalContainer > ul li img {
+  width: 130px;
+  height: 130px;
+}
+
+/* -- globalDanal -- */
+.globalDanal {
+  position: relative;
+  background: #1b2d50 url(../img/img_main02.png) no-repeat fixed;
+  background-size: cover;
+  padding: 140px 120px;
+  height: 800px;
+}
+.globalDanalContainer {
+  position: relative;
+  max-width: 1640px;
+  padding: 140px 120px;
+  height: 800px;
+  margin: 0 auto;
+}
+.globalDanalContainer > div {
+  position: absolute;
+  height: 555px;
+}
+.globalDanalContainer > div > h2 {
+  position: relative;
+  font-size: 78px;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+}
+.globalDanalContainer > div > p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 80px;
+}
+.globalDanalContainer > div > button {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 50px 10px 0;
+  background: url(../img/icon_arr04.png) no-repeat 90% 50%/22px 12px;
+}
+.globalDanalContainer button {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 30px 0 0;
+  background: url(../img/icon_arr04.png) no-repeat 90% 50%/22px 12px;
+}
+.globalDanalContainer > ul {
+  position: absolute;
+  right: 120px;
+  width: 780px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.globalDanalContainer > ul li {
+  padding: 15px;
+  color: #fff;
+  width: 390px;
+}
+.globalDanalContainer > ul li dl {
+  background: #2f446d;
+  padding: 30px;
+  border-radius: 30px;
+  height: 190px;
+}
+.globalDanalContainer > ul li dt {
+  position: relative;
+  font-size: 20px;
+  border-bottom: 1px solid #59698a;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.globalDanalContainer > ul li dd {
+  position: relative;
+  font-size: 14px;
+  padding: 10px 90px 0 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.globalDanalContainer > ul li dd em {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: rgba(128, 128, 128, 0.5);
+}
+
+/*-- family Danal --*/
+.familyDanal {
+  position: relative;
+  background: #fff;
+  padding: 120px 140px;
+  height: 800px;
+}
+.familyDanal h2 {
+  font-size: 78px;
+  font-weight: 700;
+  color: #3c8aff;
+  display: block;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.familyDanal p {
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 400;
+  color: #222;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.familyDanalContainer {
+  position: relative;
+  max-width: 1640px;
+  padding: 140px 120px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* -- partnerDanal -- */
+
+.patnerDanal {
+  position: relative;
+  background: #fff;
+  padding: 120px 140px;
+  height: 800px;
+}
+.patnerDanalContainer {
+  position: relative;
+  max-width: 1640px;
+  padding: 140px 120px;
+  height: 800px;
+  margin: 0 auto;
+}
+.patnerDanalContainer > div > h2 {
+  position: relative;
+  font-size: 78px;
+  color: #297bf6;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.patnerDanalContainer > div > p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 70px;
+}
+.patnerDanalContainer > div > button {
+  position: relative;
+  font-size: 18px;
+  color: #222222;
+  z-index: 999;
+  padding: 10px 50px 10px 0;
+  background: url(../img/icon_arr05.png) no-repeat 90% 50%/22px 12px;
+}
+.patnerDanalInner {
+  position: absolute;
+  max-width: 1640px;
+  right: 120px;
+  bottom: 140px;
+}
+.patnerDanalInner .partner_img {
+  display: block;
+  border-radius: 50px;
+  width: 800px;
+  height: 520px;
+  background: url(../img/img_partner.png) no-repeat center / auto 520px;
+}
+
+/* -- recruitDanal -- */
+.recruitDanal {
+  position: relative;
+  background: url(../img/img_main01.png) no-repeat fixed;
+  padding: 140px 120px;
+  height: 800px;
+}
+.recruitDanalContainer {
+  position: relative;
+  max-width: 1640px;
+  padding: 140px 120px;
+  height: 800px;
+  margin: 0 auto;
+}
+.recruitDanalContainer > div > h2 {
+  position: relative;
+  font-size: 78px;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+}
+.recruitDanalContainer > div > p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 80px;
+}
+.recruitDanalContainer > div > button {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px 50px 10px 0;
+  background: url(../img/icon_arr04.png) no-repeat 90% 50%/22px 12px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #eee;
+  background: #fff;
+  z-index: 5;
+}
+.innerFooter {
+  position: relative;
+  padding: 10px 80px 50px;
+  margin: 0 auto;
+}
+.areaInfo select {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 180px;
+  height: 40px;
+  margin-top: -20px;
+  padding: 0 10px;
+  border: 1px solid #cccccc;
+}
+.areaInfo {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 90px;
+}
+.areaInfo h1 {
+  display: inline-block;
+  width: 98px;
+  height: 38px;
+  background: url(../img/ci_danal01.png) no-repeat 0 center / 98px 38px;
+  font-size: 0;
+}
+.areaInfo ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 70px;
+}
+.areaInfo ul li {
+  padding: 0 20px;
+  font-size: 15px;
+  color: #000;
+}
+.areaLocation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.areaLocation p {
+  font-size: 14px;
+  color: rgba(128, 128, 128, 1);
+}
+.areaLocation span {
+  position: relative;
+  font-size: 13px;
+  color: rgba(153, 153, 153, 1);
+  display: inline-block;
+  padding-left: 60px;
+}
+.areaLocation span:before {
+  position: absolute;
+  left: 0;
+  top: -9px;
+  display: inline-block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url(../img/icon_isms.png) no-repeat center / 50px 50px;
+}
+
+/* -- common class -- */
+.hidden {
+  display: none;
+}
+/* -- temporary hidden -- */
+/* header nav ul li > ul {
+  display: none;
+} */
+
+/* animation keyframes */
+@keyframes scroll {
+  from {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: translate3d(0, -10px, 0);
+  }
+}

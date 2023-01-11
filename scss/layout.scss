@@ -1,0 +1,272 @@
+/* css 전처리기 */
+@import "vars";
+body {
+  font-family: "Lato", "Pretendard", "Dotum", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  /* -- fixed는 body기준 absolute는 부모 기준 */
+  top: 0;
+  z-index: 999;
+  padding: 0 50px;
+  color: #fff;
+  /* -- flex-direction에 의해 결정된 main-axis정렬 -- */
+  transition: all 300ms;
+  box-sizing: border-box;
+  &__logo {
+    z-index: 1000;
+  }
+
+  &__gnb {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  &:before {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0;
+    transition: all 300ms;
+    content: " ";
+  }
+  &.light {
+    &:before {
+      height: 80px;
+      opacity: 1;
+      transition: all 300ms;
+    }
+    .gnb {
+      &__main-menu {
+        color: #222;
+        transition: color 300ms;
+      }
+    }
+    > .header__btn > .btn_header {
+      z-index: 9;
+      color: #222;
+    }
+  }
+  &.on {
+    &:before {
+      height: 360px;
+      opacity: 1;
+      transition: all 300ms;
+    }
+    > .header__btn > .btn_header {
+      z-index: 9;
+      color: #222;
+    }
+    .gnb__main-menu {
+      height: 360px;
+      color: #222;
+      transition: all 300ms;
+    }
+  }
+  &.scroll-on {
+    top: -80px;
+    transition: all 300ms;
+  }
+  &__btn {
+    position: absolute;
+    right: 80px;
+  }
+}
+.logo {
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+  &__img {
+    height: 50px;
+  }
+}
+.gnb {
+  display: inline-block;
+  justify-content: center;
+
+  &__main-menu {
+    display: flex;
+    height: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 1;
+    transition: all 300ms;
+    > li {
+      position: relative;
+      font-size: 20px;
+      text-align: center;
+      min-width: 170px;
+      &:hover {
+        &:after {
+          width: 100%;
+          transition: all 300ms;
+        }
+        > a {
+          color: $blue;
+        }
+      }
+      &:last-child {
+        > ul {
+          border-right: 1px solid rgba(128, 128, 128, 0.8);
+        }
+      }
+      &:after {
+        display: block;
+        width: 0%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-bottom: 2px solid $blue;
+        transition: width 300ms;
+        content: " ";
+      }
+      > a {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+      }
+    }
+  }
+  &__sub-menu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    font-size: 16px;
+    text-align: left;
+    border-left: 1px solid rgba(128, 128, 128, 0.8);
+    > li {
+      position: relative;
+      padding: 10px 0;
+      text-align: center;
+      opacity: 0.4;
+      transition: opacity 300ms;
+      &:hover {
+        color: #0c64f1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  border-top: 1px solid #eee;
+  background: #fff;
+  &__inner {
+    position: relative;
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 80px 50px;
+    max-width: 1640px;
+    &__area-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      height: 90px;
+      position: relative;
+      h1 {
+        display: inline-block;
+        width: 98px;
+        height: 38px;
+        font-size: 0;
+        background: url(../img/ci_danal01.png) no-repeat 0 center / 98px 38px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 70px;
+        li {
+          padding: 0 20px;
+          font-size: 15px;
+          color: #000;
+        }
+      }
+    }
+    &__family-site {
+      .family-site {
+        width: 180px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -20px;
+        padding: 0 10px;
+        border: 1px solid #cccccc;
+      }
+    }
+    &__area-location {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      p {
+        font-size: 14px;
+        color: rgba(128, 128, 128, 1);
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        padding-left: 60px;
+        font-size: 13px;
+        color: rgba(153, 153, 153, 1);
+        &:before {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          top: -9px;
+          left: 0;
+          background: url(../img/icon_isms.png) no-repeat center / 50px 50px;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  border: solid rgba(0, 0, 0, 0);
+}
+.btn_header {
+  width: 140px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  border: 2px solid;
+  transition: all 300ms;
+  background-color: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+}

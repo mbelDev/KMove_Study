@@ -1,0 +1,12 @@
+@mixin longshadow($limit: 30, $color: rgba(0, 0, 0, 1)) {
+  $shadow: "";
+  @for $i from 1 to ($limit - 1) {
+    $shadow: $shadow + $i + "px " + $i + "px 0px " + $color + ",";
+  }
+  $shadow: $shadow + $limit + "px " + $limit + "px 0px " + $color;
+  $shadow: unquote($shadow);
+  text-shadow: $shadow;
+}
+
+@mixin center {
+}
